@@ -1,0 +1,81 @@
+[gd_scene load_steps=16 format=3 uid="uid://cne08yagwiuep"]
+
+[ext_resource type="Texture2D" uid="uid://d2myb1j4bd4co" path="res://addons/Tiny Swords/Deco/01.png" id="1_7gmin"]
+[ext_resource type="Texture2D" uid="uid://48aoetlv8e3w" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="2_fb86b"]
+[ext_resource type="Texture2D" uid="uid://bkufdjbkjyusc" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="3_rem33"]
+[ext_resource type="Texture2D" uid="uid://bn2bg2tewduv7" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Yellow/Warrior_Yellow.png" id="4_dv5xq"]
+[ext_resource type="Texture2D" uid="uid://bf03tbh1g5t1q" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="5_irtii"]
+[ext_resource type="Texture2D" uid="uid://b0mahog16kwsv" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Archer + Bow/Archer_Blue_(NoArms).png" id="6_4ikdu"]
+[ext_resource type="Texture2D" uid="uid://cq3unrxtnjcru" path="res://addons/Tiny Swords/Factions/Knights/Troops/Archer/Blue/Archer_Blue.png" id="7_lan85"]
+[ext_resource type="Texture2D" uid="uid://did06stc21d1d" path="res://addons/Tiny Swords/Factions/Knights/Troops/Dead/Dead.png" id="8_vvi01"]
+[ext_resource type="Texture2D" uid="uid://btrdxx6e3301t" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Purple/Pawn_Purple.png" id="9_rfa4x"]
+[ext_resource type="Texture2D" uid="uid://c81kq1jcpofib" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="10_xsvt1"]
+[ext_resource type="Texture2D" uid="uid://cink5rhpq8g0i" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="11_1sasm"]
+[ext_resource type="Texture2D" uid="uid://c5lghixgabvmh" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png" id="12_155fu"]
+[ext_resource type="Texture2D" uid="uid://co50elb8own2u" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="13_t562o"]
+[ext_resource type="PackedScene" uid="uid://msklb5nej5s6" path="res://misc/ritual.tscn" id="14_mdkit"]
+[ext_resource type="PackedScene" uid="uid://j7d7a0hboty4" path="res://player/player.tscn" id="15_xla0s"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="01" type="Sprite2D" parent="."]
+position = Vector2(136, 290)
+texture = ExtResource("1_7gmin")
+
+[node name="WarriorRed" type="Sprite2D" parent="."]
+position = Vector2(787, 923)
+texture = ExtResource("2_fb86b")
+
+[node name="WarriorPurple" type="Sprite2D" parent="."]
+position = Vector2(2310, 866)
+texture = ExtResource("3_rem33")
+
+[node name="WarriorYellow" type="Sprite2D" parent="."]
+position = Vector2(4477, 4561)
+texture = ExtResource("4_dv5xq")
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(773, 2517)
+texture = ExtResource("5_irtii")
+
+[node name="ArcherBlue(noArms)" type="Sprite2D" parent="."]
+position = Vector2(513, 4018)
+texture = ExtResource("6_4ikdu")
+
+[node name="ArcherBlue" type="Sprite2D" parent="."]
+position = Vector2(2577, 2939)
+texture = ExtResource("7_lan85")
+
+[node name="Dead" type="Sprite2D" parent="."]
+position = Vector2(3869, 2384)
+texture = ExtResource("8_vvi01")
+
+[node name="PawnPurple" type="Sprite2D" parent="."]
+position = Vector2(4050, 3181)
+texture = ExtResource("9_rfa4x")
+
+[node name="PawnBlue" type="Sprite2D" parent="."]
+position = Vector2(4309, 2057)
+texture = ExtResource("10_xsvt1")
+
+[node name="PawnRed" type="Sprite2D" parent="."]
+position = Vector2(3098, 2831)
+texture = ExtResource("11_1sasm")
+
+[node name="TorchPurple" type="Sprite2D" parent="."]
+position = Vector2(2173, 2286)
+texture = ExtResource("12_155fu")
+
+[node name="PawnBlue2" type="Sprite2D" parent="."]
+position = Vector2(5674, 2761)
+scale = Vector2(1.11521, 0.956895)
+texture = ExtResource("10_xsvt1")
+
+[node name="MSpawn" type="Sprite2D" parent="."]
+position = Vector2(6888, 2109)
+texture = ExtResource("13_t562o")
+
+[node name="Ritual" parent="." instance=ExtResource("14_mdkit")]
+
+[node name="Player" parent="." instance=ExtResource("15_xla0s")]
+position = Vector2(9378, 1843)

@@ -1,0 +1,4 @@
+res://man.tscn
+res://systems/difficult_system.gd
+res://ui/game_ui.gd
+res://game_over_ui.tscn

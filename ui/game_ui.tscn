@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7skg3dm5hdcw"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_hnj6v"]
+[ext_resource type="Texture2D" uid="uid://djqom62mceldn" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_uqsr3"]
+[ext_resource type="Texture2D" uid="uid://d2ab55qvny0sn" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_ws8co"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r0c2n"]
+font_size = 30
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1n14g"]
+texture = ExtResource("1_uqsr3")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljykq"]
+atlas = ExtResource("3_ws8co")
+region = Rect2(32, 48, 72, 56)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5de4n"]
+font_size = 35
+font_color = Color(0.00684422, 0.0131633, 0.00409857, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lplfh"]
+font_size = 35
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_hnj6v")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.026
+offset_left = -59.0
+offset_top = 17.0
+offset_right = 60.0
+offset_bottom = 37.152
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "00:00"
+label_settings = SubResource("LabelSettings_r0c2n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_top = 19.0
+offset_right = -19.0
+offset_bottom = 133.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1n14g")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+offset_left = 29.0
+offset_right = 115.0
+offset_bottom = 74.0
+texture = SubResource("AtlasTexture_ljykq")
+
+[node name="MeatLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -101.0
+offset_top = 8.0
+offset_right = -50.0
+offset_bottom = 66.0
+grow_horizontal = 0
+text = "00"
+label_settings = SubResource("LabelSettings_5de4n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoldLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -190.0
+offset_top = 132.0
+offset_right = -39.0
+offset_bottom = 193.0
+grow_horizontal = 0
+text = "Deat ene"
+label_settings = SubResource("LabelSettings_lplfh")
+horizontal_alignment = 1
+vertical_alignment = 1
