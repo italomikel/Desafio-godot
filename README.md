@@ -13,7 +13,7 @@ Este é um repositório para o Bootcamp da Dio, onde criei um jogo com a Godot E
 * Tela de game over
 
 ## Jogo Desenvolvido:
-[Eternal Battle](https://italo-mk.itch.io/eternal-battle-in-confinesl)
+[Eternal Battle](https://italo-mk.itch.io/eternal-battle-in-confines)
 
 ## Assets:
 [Tiny Swords](https://pixelfrog-assets.itch.io/tiny-swords)
